@@ -3,4 +3,11 @@ class Post < ActiveRecord::Base
   belongs_to :user
 
   default_scope { order('created_at DESC') }
+  #scope :ordered_by_created_at, -> { order('created_at ASC') }
+  #scope :order_by_title, -> { order('title') }
+  #scope :for_user, -> (user) { |user| where(user_id: user.id) }  #Post.for_user(current_user)
+
+  # scope :private, -> { where(private: true) }
+
+
 end
