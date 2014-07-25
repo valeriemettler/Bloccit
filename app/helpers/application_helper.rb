@@ -6,5 +6,9 @@ module ApplicationHelper
       content_tag :div, capture(&block), class: 'form-group'
     end
   end
+
+  def error_class(errors)
+    errors.any? ? "form-group has-error" : "form-group" 
+  end
 end
 
