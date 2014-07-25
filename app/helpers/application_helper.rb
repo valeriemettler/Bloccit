@@ -14,6 +14,10 @@ module ApplicationHelper
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
     (redcarpet.render text).html_safe
   end
-  
+ 
+  def error_class(errors)
+    errors.any? ? "form-group has-error" : "form-group" 
+  end
+
 end
 
