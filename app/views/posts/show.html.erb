@@ -14,5 +14,14 @@
 <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
 <% end %>
   </div>
+  <% if current_user %>
+    <div>
+      <%= render partial: "comments/form" %>
+    </div>
+  <% end %>
+
+  <ul>
+    <%= render @comments %>
+  </ul>
 </div>
 

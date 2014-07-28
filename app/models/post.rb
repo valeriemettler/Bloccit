@@ -3,6 +3,8 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :topic
 
+  
+
   default_scope { order('created_at DESC') }
   #scope :ordered_by_created_at, -> { order('created_at ASC') }
   #scope :order_by_title, -> { order('title') }
