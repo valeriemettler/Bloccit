@@ -4,7 +4,6 @@ class PostsController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
     @comments = @post.comments
-    Rails.logger.info ">>>> #{@comments.inspect}"
   end
 
   def new
@@ -36,11 +35,11 @@ class PostsController < ApplicationController
 
   def update
      @topic = Topic.find(params[:topic_id])
-     #@post = Post.find(params[:id])
+     @post = Post.find(params[:id])
      authorize @post
 
-     #if @post.update_attributes(params.require(:post).permit(:title, :body))
-     if @post.update_attributes(post_params)
+     if @post.update_attributes(params.require(:post).permit(:title, :body, :image))
+     #if @post.update_attributes(post_params)
        flash[:notice] = "Post was updated."
        redirect_to [@topic, @post]
      else
@@ -52,7 +51,7 @@ class PostsController < ApplicationController
    def destroy
     @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
-    title = @posts.title
+    title = @post.title
     authorize @post
 
     if @post.destroy
