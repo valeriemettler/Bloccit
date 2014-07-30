@@ -1,6 +1,8 @@
-<%= form_for [@topic, @post, @post.comments.build] do |f| %>
-  <%= f.label :body, "Add a comment" %>
-  <%= f.text_area :body %>
+<%= simple_form_for [topic, post, comment] do |f| %>
+  <div class="form-group">
+    <%= f.label :body, "Add a comment" %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
 
   <%= f.submit %>
 <% end %>
