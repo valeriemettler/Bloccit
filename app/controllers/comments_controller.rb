@@ -38,8 +38,8 @@ class CommentsController < ApplicationController
   end
 
   def set_topic_and_post
-    @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:post_id])
+    @topic = @post.topic    
   end
 
 end
