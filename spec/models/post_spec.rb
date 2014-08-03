@@ -1,10 +1,14 @@
 require 'rails_helper'
  
  describe Post do
+ include TestFactories
+
    describe "vote methods" do
  
      before do
-       @post = Post.create(title: 'Post title', body: 'Post bodies must be pretty long.')
+       #@post = Post.create(title: 'Post title', body: 'Post bodies must be pretty long.')
+       #allow(@post).to receive(:create_vote)
+       @post = post_without_user
        3.times { @post.votes.create(value: 1) }
        2.times { @post.votes.create(value: -1) }
      end
