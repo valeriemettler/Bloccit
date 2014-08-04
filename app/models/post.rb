@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :topic
 
   has_many :votes
+  has_many :favorites, dependent: :destroy
 
   
 

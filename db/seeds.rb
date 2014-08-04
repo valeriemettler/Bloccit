@@ -77,7 +77,7 @@ end
  # Create a member
  member = User.new(
    name:     'Member User',
-   email:    'member@example.com',
+   email:    'valeriemettler@gmail.com',
    password: 'helloworld',
  )
  member.skip_confirmation!
