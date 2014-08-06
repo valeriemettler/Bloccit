@@ -1,4 +1,4 @@
-<%= simple_form_for [post, comment] do |f| %>
+<%= form_for [@post, @post.comments.build], remote: true do |f| %>
   <div class="form-group">
     <%= f.label :body, "Add a comment" %>
     <%= f.text_area :body, class: "form-control" %>

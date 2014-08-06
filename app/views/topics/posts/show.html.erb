@@ -30,18 +30,23 @@
    <%= render partial: 'favorites/favorite', locals: { post: @post, topic: @topic } %>
   </div>
 
+
   <% if current_user %>
-    <div class="clearfix">
-      <%= render partial: "comments/form", locals: { post: @post, comment: @comment} %>
+
+     <div class="clearfix">
+     
+     <h2>Comments</h2>
+
+    <div class='js-comments'>
+    <%= render partial: "comments/comment", collection: @comments %>
+  </div>
+       
+  <div class='new-comment'>
+  <%= render partial: "comments/form", locals: { post: @post, comment: @comment} %>
     </div>
   <% end %>
 
-  <ul>
-    <%= render partial: "comments/comment", collection: @comments %>
-  </ul>
+
 
 </div>
-
-
-
 

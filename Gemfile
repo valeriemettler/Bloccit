@@ -12,6 +12,9 @@ gem 'rails', '4.0.5'
  
  group :development do
    gem 'sqlite3'
+   gem 'better_errors'
+   gem 'binding_of_caller'
+   gem 'meta_request'
  end
 
 gem 'bootstrap-sass', '~> 3.1.1'
@@ -56,6 +59,9 @@ gem 'will_paginate', '~> 3.0.5'
 
 group :test do
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 

@@ -9,6 +9,7 @@ class Post < ActiveRecord::Base
   
 
   default_scope { order('rank DESC') }
+  scope :visible_to, -> (user) { user ? all : joins(:topic).where('topics.public' => true) }
   #scope :ordered_by_created_at, -> { order('created_at ASC') }
   #scope :order_by_title, -> { order('title') }
   #scope :for_user, -> (user) { |user| where(user_id: user.id) }  #Post.for_user(current_user)
