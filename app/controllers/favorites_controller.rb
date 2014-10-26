@@ -6,12 +6,9 @@ class FavoritesController < ApplicationController
       authorize favorite
 
      if favorite.save
-       #generate a success flash and redirect to @post
        flash[:notice] = "Favorited post"
-       # Remember the path shortcut: [@post.topic, @post]
        redirect_to [@post.topic, @post]
      else
-       # generate a failure flash and redirect to @post
       flash[:error] = "Unable to add favorite. Please try again."
       redirect_to [@post.topic, @post]
      end

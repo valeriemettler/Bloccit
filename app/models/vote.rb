@@ -1,5 +1,4 @@
 class Vote < ActiveRecord::Base
-   
   belongs_to :user
   belongs_to :post, dependent: :destroy 
 
@@ -24,7 +23,6 @@ class Vote < ActiveRecord::Base
   def update_post
     post.update_rank
   end
-  
 end
 
 
