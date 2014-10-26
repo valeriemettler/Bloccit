@@ -1,10 +1,8 @@
 class TopicsController < ApplicationController
 
   def index
-
     @topics = Topic.visible_to(current_user).paginate(page: params[:page], per_page: 10)
     authorize @topics
-    
   end
 
   def new
@@ -33,8 +31,8 @@ class TopicsController < ApplicationController
      else
        flash[:error] = "Error creating topic. Please try again."
        render :new
-     end
   end
+end
 
   def update
      @topic = Topic.find(params[:id])
@@ -60,6 +58,5 @@ class TopicsController < ApplicationController
       flash[:error] = "There was an error deleting the topic."
       render :show
     end
-    
-end
+  end
 end

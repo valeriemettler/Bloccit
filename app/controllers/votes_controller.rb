@@ -9,7 +9,6 @@ class VotesController < ApplicationController
       @vote = current_user.votes.create(value: 1, post: @post)
     end
 
-    # http://apidock.com/rails/ActionController/Base/redirect_to
     redirect_to :back
   end
 
@@ -21,7 +20,6 @@ class VotesController < ApplicationController
       @vote = current_user.votes.create(value: -1, post: @post)
     end
 
-    # http://apidock.com/rails/ActionController/Base/redirect_to
     redirect_to :back
   end
 
@@ -32,7 +30,6 @@ class VotesController < ApplicationController
     @vote = @post.votes.where(user_id: current_user.id).first
   end
   
-
  def update_vote(new_value)
     if @vote
        authorize @vote, :update?
@@ -43,5 +40,4 @@ class VotesController < ApplicationController
        @vote.save
     end
   end
-
 end
