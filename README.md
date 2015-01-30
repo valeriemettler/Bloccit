@@ -1,15 +1,15 @@
 == README
 
-## valbloccit: a Reddit clone to learn the fundamentals of web development and Rails 4. 
+## valbloccit: a Reddit clone to learn the fundamentals of web development and Rails 4.
 
-http://valblocitoff.herokuapp.com/
-https://github.com/valeriemettler/Bloccit.git
+http://valblocitoff.herokuapp.com (demo version)
+https://github.com/valeriemettler/Bloccit.git (source code)
 
 Made with my mentor, Chris Beck, at [Bloc](http://bloc.io).
 
 Ruby version 2.0.0
 
-setup: 
+setup:
 config/application.yml
 config/application.example.yml
 
