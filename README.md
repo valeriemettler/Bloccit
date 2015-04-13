@@ -2,7 +2,7 @@
 
 ## valbloccit: a Reddit clone to learn the fundamentals of web development and Rails 4.
 
-http://valblocitoff.herokuapp.com (demo version)
+http://valbloccit.herokuapp.com (demo version)
 
 https://github.com/valeriemettler/Bloccit.git (source code)
 
