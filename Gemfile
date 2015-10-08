@@ -6,7 +6,7 @@ gem 'rails', '4.0.5'
    gem 'pg'
    gem 'rails_12factor'
  end
- 
+
  group :development do
    gem 'sqlite3'
    gem 'better_errors'
@@ -24,7 +24,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
-  
+
   gem 'sdoc', require: false
 end
 
@@ -37,6 +37,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'will_paginate', '~> 3.0.5'
+gem 'rack-zippy'
 
 group :test do
   gem 'rspec-rails'
